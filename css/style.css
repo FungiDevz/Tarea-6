@@ -1,0 +1,431 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --gray: rgb(172, 172, 172);
+    --blue: rgb(62, 158, 254);  
+    --lightgray: rgb(242, 242, 242);
+}
+
+
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+h2{
+    font-size: 15px;
+    font-weight: 500;
+}
+h3{
+    font-size: 13px;
+}
+
+p{
+    font-size: 10px;
+}
+
+b{
+    font-weight: 425;
+}
+
+
+
+/* -----------------------------------------------------------HEADER----------------------------------------------------------- */
+
+
+
+.pcHeader{
+    display: none;
+}
+
+.phoneHeader{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.phoneHeader div{
+    width: 50%;
+    display: flex;
+}
+
+
+.phoneHeader a{
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.phoneHeader h2{
+    margin-left: 25px;
+}
+
+.login{
+    text-decoration: none;
+
+    color: white;
+    background-color: var(--blue);
+
+    padding: 7px 15px;
+    border-radius: 7px;
+ 
+    font-size: 15px;
+    margin-right: 15px;
+}
+
+.login:hover{
+    background-color: rgb(52, 148, 245);
+}
+
+
+.sign{
+    text-decoration: none;
+
+    color: var(--blue);
+    font-size: 15px;
+}
+
+.sign:hover{
+    color: rgb(39, 108, 177);
+}
+
+
+/* -----------------------------------------------------------MAIN----------------------------------------------------------- */
+
+main section{
+    padding: 15px;
+}
+
+.user img{
+    width: 65px;
+    border-radius: 1000px;
+
+    padding: 2px;
+    border: solid 4px var(--lightgray);  
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+
+    margin-bottom: 5px;
+}
+
+.pcUser{
+    display: none;
+}
+
+button{
+    margin: 0 5%;
+    padding: 7px;
+
+    border-radius: 5px;
+    border: none;
+
+    background-color: var(--blue);
+    color: white;
+    
+    font-size: 11px;
+
+    width: 90%;
+}
+
+button b{
+    font-weight: 550;
+}
+
+.destacadas{
+    display: flex;
+}
+
+.destacadas a{
+    text-decoration: none;
+
+    margin-right: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    gap: 10px;
+    
+    color: black;
+    font-size: 12px;
+}
+
+.destacadas img{
+    width: 60px;
+    height: 60px;
+    border-radius: 1000px;
+    padding: 2px;
+    border: solid 3px var(--lightgray);  
+
+}
+
+.icons span{
+    display: none;
+}
+
+.publicaciones{
+    margin: 0;
+    padding: 0;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    
+    margin: 0 20%;
+
+}
+
+.publicaciones h2{
+    font-size: 25px;
+    color: var(--gray);
+}
+
+.selected i{
+    color: black;
+    border-bottom: solid 2px black;
+}
+
+
+.fotos{
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    
+}
+
+.publicaciones img{
+    object-fit: cover;
+    width: 32.8vw;
+    height: 32.8vw;  
+}
+
+
+
+/* -----------------------------------------------------------PC----------------------------------------------------------- */
+
+@media(min-width: 1024px){
+    .phoneHeader{
+        display: none;
+    }
+
+    .pcHeader{
+        position: fixed;
+
+        width: 100%;
+        background-color: white;
+
+        z-index: 1;
+
+        display: flex;
+        border-bottom: solid 1px var(--lightgray);
+        align-items: center;
+    }
+
+    .headDiv{
+        
+
+        width: 70%;
+        margin: 0 auto;
+
+        padding: 5px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .pcHeader img{
+        margin-top: 5px;
+        height: 40px;
+    }
+
+    .searchDiv{
+        background-color: var(--lightgray);
+        border-radius: 20px;
+        padding: 0 17px;
+
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .searchDiv i{
+        color: var(--gray);
+        font-size: 17px;
+    }
+
+    .search{
+        border: none;
+        background-color: var(--lightgray);
+        width: 300px;
+        
+        padding: 9px 0;
+
+        font-size: 15px;
+
+            
+
+        outline: none;
+    }
+
+
+    main{
+        position: relative;
+        top: 50px;
+
+        z-index: 0;
+        
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    main section{
+        padding-top: 30px;
+    }
+
+    .user{
+        align-items: flex-start;
+        justify-content: left;
+        gap: 50px;
+
+        width: 90%;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .pcUser{
+        display: block;
+    }
+    .phoneUser{
+        display: none;
+    }
+
+    .pcUser img{
+        width: 150px;
+        margin-right: 50px;
+
+        padding: 5px;
+        border: solid 4px var(--lightgray);  
+    }
+
+
+    .infoUser{
+        margin-bottom: 15px;
+
+        display: flex;
+        gap: 9px;
+        align-items: center;
+    }
+
+    .infoUser h2{
+        margin-right: 10px;
+
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .infoUser a{
+        text-decoration: none;
+        color: black;
+
+        font-size: 15px;
+        background-color: var(--lightgray);
+
+        padding: 6px 15px;
+        border-radius: 7px;
+    }
+
+    .infoUser a:hover{
+        background-color: rgb(231, 231, 231);;
+    }
+
+
+    .followInfo{
+        display: flex;
+        gap: 40px;
+
+        margin-bottom: 15px;
+    }
+
+    .followInfo h2{
+        font-size: 13px;
+    }
+
+    .user p{
+        font-size: 13px;
+    }
+
+    button{
+        display: none;
+    }
+
+
+    .destacadas{
+        margin-left: 2.5%;
+        gap: 20px;
+
+        padding-bottom: 5%;
+        border-bottom: solid 1px var(--gray);
+    }
+
+    .destacadas img{
+        width: 75px;
+        height: 75px;
+
+    }
+
+
+    .icons h2{
+        display: flex;
+        align-items: center;
+    }
+
+    .icons a{
+        text-decoration: none;
+        padding: 18px 0 ;
+    }
+
+    .icons i{
+        font-size: 15px;
+    }
+
+    .icons span{
+        display: initial;
+        border: none; 
+
+        text-align: center;
+        font-size: 13px;
+        margin-left: 5px;
+    }
+
+    .selected{
+        border-top: solid 1px black;
+        
+    }
+
+    .selected i{
+        border: none;
+    }
+
+    .selected span{
+        color: black;
+    }
+
+
+    .publicaciones img{
+        width: 22.9vw;
+        height: 23vw;
+    }
+}
